@@ -6,7 +6,23 @@ import Messages from "./components/Messages";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
 import Settings from "./components/Settings";
+import userContext from "./context/userContext";
+import { useContext } from "react";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 function App() {
+  const { logUser } = useContext(userContext);
+
+  if (!logUser)
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    );
   return (
     <BrowserRouter>
       <NavBar />
