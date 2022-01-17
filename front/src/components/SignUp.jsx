@@ -19,6 +19,10 @@ export default function SignUp() {
             placeholder="First name"
           />
         </div>
+        <div className="form-group">
+          <label>User Name</label>
+          <input type="text" className="form-control" placeholder="User Name" />
+        </div>
 
         <div className="form-group">
           <label>Last name</label>
