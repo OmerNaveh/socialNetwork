@@ -11,7 +11,12 @@
   color: white;
   opacity: 0.9;
 }
-
+.logout {
+  color: rgb(224, 38, 38);
+}
+.logout:hover {
+  cursor: pointer;
+}
 /* footer */
 .footer {
   background-color: rgb(33, 37, 41);

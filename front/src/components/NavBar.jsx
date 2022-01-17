@@ -2,8 +2,14 @@ import React from "react";
 import logoImg from "../images/SocialNet.jpg";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import userContext from "../context/userContext";
 
 export default function NavBar() {
+  const { logUser, setLogUser } = useContext(userContext);
+  const logout = () => {
+    setLogUser(false);
+  };
   return (
     <Navbar collapseOnSelect fixed="top" expand="lg" bg="dark" variant="dark">
       <Container>
@@ -32,6 +38,12 @@ export default function NavBar() {
             <Link className="navbarLinks" to="/settings">
               Settings
             </Link>
+          </Nav>
+          <Nav className="ml=auto">
+            <span className="navbarLinks">welcome {logUser},</span>
+            <span onClick={logout} className="navbarLinks logout">
+              logout
+            </span>
           </Nav>
         </Navbar.Collapse>
       </Container>

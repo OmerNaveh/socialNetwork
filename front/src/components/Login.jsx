@@ -1,7 +1,14 @@
 import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import userContext from "../context/userContext";
 
 export default function Login() {
+  const { setLogUser } = useContext(userContext);
+
+  const logBtn = () => {
+    setLogUser("tshabalabala");
+  };
   return (
     <div>
       <form>
@@ -25,7 +32,11 @@ export default function Login() {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary btn-block mt-3">
+        <button
+          type="submit"
+          className="btn btn-primary btn-block mt-3"
+          onClick={logBtn}
+        >
           Submit
         </button>
         <p className="forgot-password text-right">
