@@ -7,11 +7,6 @@ export default function Home() {
       <p>a</p>
       <p>a</p>
       <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
     </div>
   );
 }
