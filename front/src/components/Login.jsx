@@ -18,6 +18,7 @@ export default function Login() {
       return;
     }
     try {
+      axios.defaults.withCredentials = true; // allows request to set cookies
       const res = await axios.put(apiUrl, { email, password });
       setLogUser(res.data);
     } catch (error) {
