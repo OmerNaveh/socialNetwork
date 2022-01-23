@@ -1,12 +1,14 @@
 import React from "react";
+import CreatePost from "./HomePage/CreatePost";
+import Feed from "./HomePage/Feed";
+import ProfileInfo from "./HomePage/ProfileInfo";
 
 export default function Home() {
   return (
     <div className="content">
-      In Home
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
+      <CreatePost />
+      <Feed />
+      <ProfileInfo />
     </div>
   );
 }

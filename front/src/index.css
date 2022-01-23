@@ -80,3 +80,71 @@
   color: red;
   font-weight: bold;
 }
+
+/* home page */
+.createPostBtn {
+  background-color: rgba(187, 187, 187, 0.3);
+  border-radius: 2em;
+  border: solid 0.5px rgb(117, 117, 117, 0.3);
+  width: 100%;
+  margin: 0 5%;
+}
+.createPostBtn:hover {
+  background-color: rgba(228, 228, 228, 0.3);
+  cursor: pointer;
+}
+.CreatePostDiv {
+  display: flex;
+  text-align: center;
+  border-radius: 0.5em;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  padding: 1em;
+}
+.CreatePostImg {
+  border-radius: 50%;
+}
+.popUpForm {
+  position: fixed;
+  margin: 0 10%;
+  height: 70vh;
+  width: 50vw;
+  background-color: rgb(243, 243, 243);
+  border: 1px solid black;
+  border-radius: 2rem;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+}
+.postInputText {
+  height: 70%;
+  min-height: 30%;
+  max-height: 75%;
+  font-size: 0.8em;
+  border: none;
+  margin: 0 2%;
+  resize: none;
+}
+.postInputText:focus {
+  outline: none;
+}
+.postBtns {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+.postCancelBtn {
+  margin-left: 0.5em;
+  background-color: rgb(223, 59, 59, 0.6);
+  border: none;
+}
+.postCancelBtn:hover {
+  background-color: rgba(238, 48, 48);
+}
+.postSubmitBtn {
+  background-color: rgb(7, 110, 7, 0.7);
+  border: none;
+}
+.postSubmitBtn:hover {
+  background-color: rgba(6, 124, 6);
+}
