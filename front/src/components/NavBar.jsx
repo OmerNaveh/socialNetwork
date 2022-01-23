@@ -4,10 +4,13 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import userContext from "../context/userContext";
+import axios from "axios";
+const apiUrl = "http://localhost:3030/api/users";
 
 export default function NavBar() {
   const { logUser, setLogUser } = useContext(userContext);
-  const logout = () => {
+  const logout = async () => {
+    await axios.delete(apiUrl, { user_name: logUser });
     setLogUser(false);
   };
   return (

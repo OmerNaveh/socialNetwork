@@ -74,3 +74,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(253, 184, 55, 0.5);
 }
+
+/* errorHandling */
+.errorMsg {
+  color: red;
+  font-weight: bold;
+}
